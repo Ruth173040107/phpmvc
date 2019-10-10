@@ -11,13 +11,13 @@
  		$dsn = 'mysql:host=localhost;dbname=phpmvc';
 
  		try {
- 			$this->dbh = new PDO($dsn, 'root', 'root')
- 		}catch(PDOException $e){
+ 			$this->dbh = new PDO($dsn, 'root', '');
+ 		}catch(PDOException $e){ 
  			die($e->getMessage());
  		}
  	}
 
- 	public function getallMahasiswa()
+ 	public function getAllMahasiswa()
  	{
  		$this->stmt = $this->dbh->prepare('SELECT * FROM mahasiswa');
  		$this->stmt->execute();
