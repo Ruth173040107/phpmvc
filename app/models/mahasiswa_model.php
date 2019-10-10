@@ -5,7 +5,7 @@
  	private $dbh;
  	private $stmt;
 
- 	public function construct()
+ 	public function __construct()
  	{
  		// data source name
  		$dsn = 'mysql:host=localhost;dbname=phpmvc';
